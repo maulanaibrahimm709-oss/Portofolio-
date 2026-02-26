@@ -1,20 +1,18 @@
-
 <html lang="id">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Profil Mahasiswa - Maulana Ibrahim</title>
+  <title>Profil Maulana Ibrahim</title>
   <meta name="description" content="Profil pribadi Maulana Ibrahim — Mahasiswa Teknik Informatika." />
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <!-- Icon CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
   <style>
     :root{--bg:#0f172a;--glass:rgba(255,255,255,0.06);--accent:#7c3aed}
-    body{font-family:Inter,ui-sans-serif; background:var(--bg); color:#e6eef8; scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif;background:var(--bg);color:#e6eef8;scroll-behavior:smooth}
     .frost{backdrop-filter:blur(8px);background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06)}
     .reveal{opacity:0;transform:translateY(18px);transition:all .7s ease}
     .reveal.show{opacity:1;transform:translateY(0)}
@@ -23,167 +21,186 @@
     .floaty{animation:float 6s ease-in-out infinite}
     @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
     .glow{box-shadow:0 0 25px rgba(124,58,237,0.7)}
-    .active-link{color:#fff !important; font-weight:600; border-bottom:2px solid var(--accent)}
+    .active-link{color:#fff !important;font-weight:600;border-bottom:2px solid var(--accent)}
   </style>
 </head>
 <body class="antialiased leading-relaxed">
 
-  <!-- NAVBAR -->
-  <nav class="fixed w-full z-40 top-6 left-0 px-6">
-    <div class="max-w-6xl mx-auto flex items-center justify-between">
-      <a href="#beranda" class="flex items-center gap-3 glass-btn">
-        <div class="w-9 h-9 rounded-full flex items-center justify-center bg-gradient-to-br from-purple-500 to-cyan-400 text-black font-bold">MI</div>
-        <div class="hidden sm:block text-sm">Maulana Ibrahim</div>
-      </a>
-      <div class="hidden md:flex items-center gap-4" id="navbar-links">
-        <a href="#tentang" class="text-sm hover:text-white/90">Tentang</a>
-        <a href="#pendidikan" class="text-sm hover:text-white/90">Pendidikan</a>
-        <a href="#hobi" class="text-sm hover:text-white/90">Hobi</a>
-        <a href="#kontak" class="text-sm hover:text-white/90">Kontak</a>
-        <a href="mailto:maulana@example.com" class="glass-btn text-sm">Hubungi</a>
+<!-- Background Glow -->
+<div class="fixed inset-0 -z-10">
+  <div class="absolute top-20 left-20 w-72 h-72 bg-purple-600 opacity-20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 right-20 w-72 h-72 bg-cyan-500 opacity-20 rounded-full blur-3xl"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-40 top-6 left-0 px-6">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    <a href="#beranda" class="flex items-center gap-3 glass-btn">
+      <div class="w-9 h-9 rounded-full flex items-center justify-center bg-gradient-to-br from-purple-500 to-cyan-400 text-black font-bold">MI</div>
+      <div class="hidden sm:block text-sm">Maulana Ibrahim</div>
+    </a>
+    <div class="hidden md:flex items-center gap-4" id="navbar-links">
+      <a href="#tentang" class="text-sm hover:text-white/90">Tentang</a>
+      <a href="#pendidikan" class="text-sm hover:text-white/90">Pendidikan</a>
+      <a href="#skill" class="text-sm hover:text-white/90">Skill</a>
+      <a href="#project" class="text-sm hover:text-white/90">Project</a>
+      <a href="#hobi" class="text-sm hover:text-white/90">Hobi</a>
+      <a href="#kontak" class="text-sm hover:text-white/90">Kontak</a>
+      <a href="mailto:maulanaibrahimm709@example.com" class="glass-btn text-sm">Hubungi</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-6xl mx-auto px-6 pt-24 relative z-10">
+
+<!-- HERO -->
+<section id="beranda" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-screen">
+  <div>
+    <h1 class="text-4xl sm:text-5xl font-extrabold reveal">
+      Halo, saya 
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-300">
+        Maulana Ibrahim
+      </span>
+    </h1>
+    <p class="mt-4 text-slate-300 reveal">
+      Mahasiswa Universitas Trunodjoyo Madura Prodi Teknik Informatika yang tertarik pada pemrograman, UI/UX, dan teknologi kreatif.
+    </p>
+  </div>
+  <div class="flex justify-center md:justify-end">
+    <img src="profil.jpg" class="w-40 h-40 rounded-full border-4 border-purple-500 glow floaty object-cover"/>
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang" class="mt-16">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-1/4"><div class="accent-underline"></div></div>
+    <h2 class="text-2xl font-bold">Tentang Saya</h2>
+  </div>
+  <div class="frost p-6 rounded-xl reveal">
+    <p class="text-slate-300">
+      Saya tertarik pada bagaimana teknologi dapat digunakan untuk menciptakan solusi yang bermanfaat dan efisien. Fokus utama saya saat ini adalah pengembangan front-end menggunakan HTML, CSS, dan JavaScript, serta memahami konsep desain antarmuka yang tidak hanya menarik secara visual tetapi juga nyaman dan mudah digunakan (user-friendly). Selain itu, saya juga terus mengembangkan kemampuan problem solving, logika pemrograman, dan kerja tim melalui berbagai proyek maupun tugas akademik.
+      Bagi saya, dunia teknologi adalah bidang yang terus berkembang dan penuh tantangan. Oleh karena itu, saya selalu berusaha untuk belajar hal-hal baru, mengikuti perkembangan tren teknologi, serta meningkatkan keterampilan agar dapat menjadi seorang developer yang kompeten, kreatif, dan profesional di masa depan.
+    </p>
+  </div>
+</section>
+
+<!-- PENDIDIKAN -->
+<section id="pendidikan" class="mt-16">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-1/4"><div class="accent-underline"></div></div>
+    <h2 class="text-2xl font-bold">Riwayat Pendidikan</h2>
+  </div>
+
+  <div class="space-y-4">
+    <div class="frost p-4 rounded-xl reveal">
+      <h4 class="font-semibold">Universitas Trunojoyo Madura</h4>
+      <p class="text-sm text-slate-300">S1 Teknik Informatika - Sekarang</p>
+    </div>
+    <div class="frost p-4 rounded-xl reveal">
+      <h4 class="font-semibold">SMK Darul Ulum Banyuanyar</h4>
+      <p class="text-sm text-slate-300">TKJ — 2021-2024</p>
+    </div>
+    <div class="frost p-4 rounded-xl reveal">
+       <h4 class="font-semibold">MTS Darul Ulum II</h4>
+       <p class="text-sm text-slate-300">2018-2021</p>
+    </div>
+    <div class="frost p-4 rounded-xl reveal">
+       <h4 class="font-semibold">SDN Bujur Barat I</h4>
+       <p class="text-sm text-slate-300">2012-2018</p>
+  </div>
+</section>
+
+<!-- SKILL -->
+<section id="skill" class="mt-16">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-1/4"><div class="accent-underline"></div></div>
+    <h2 class="text-2xl font-bold">Keahlian</h2>
+  </div>
+
+  <div class="frost p-6 rounded-xl reveal space-y-4">
+    <div>
+      <p>HTML</p>
+      <div class="w-full bg-white/10 h-2 rounded-full">
+        <div class="bg-purple-500 h-2 rounded-full w-[90%]"></div>
       </div>
     </div>
-  </nav>
-
-  <!-- MAIN -->
-  <main class="max-w-6xl mx-auto px-6 pt-16 relative z-10">
-
-    <!-- HERO -->
-    <section id="beranda" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-screen">
-      <div>
-        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold leading-tight reveal">Halo, saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-300">Maulana Ibrahim</span></h1>
-        <p class="mt-4 text-slate-300 max-w-xl reveal">Saya mahasiswa Teknik Informatika yang tertarik dengan pemrograman, desain antarmuka, dan teknologi kreatif.</p>
-        <div class="mt-6 flex items-center gap-3 reveal">
-          <a class="glass-btn inline-flex items-center gap-3" href="#kontak"><i class="fa-solid fa-paper-plane"></i> Hubungi Saya</a>
-        </div>
+    <div>
+      <p>CSS</p>
+      <div class="w-full bg-white/10 h-2 rounded-full">
+        <div class="bg-cyan-400 h-2 rounded-full w-[85%]"></div>
       </div>
-      <div class="flex flex-col items-center md:items-end">
-        <img src="profil.jpg" alt="Foto Profil Maulana Ibrahim" class="w-40 h-40 rounded-full object-cover border-4 border-purple-500 glow floaty" />
+    </div>
+    <div>
+      <p>JavaScript</p>
+      <div class="w-full bg-white/10 h-2 rounded-full">
+        <div class="bg-purple-400 h-2 rounded-full w-[75%]"></div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- ABOUT -->
-    <section id="tentang" class="mt-16">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-1/3 md:w-1/4"><div class="accent-underline"></div></div>
-        <h2 class="text-2xl font-bold">Tentang Saya</h2>
-      </div>
-      <div class="frost p-6 rounded-xl reveal">
-        <p class="text-slate-300">Saya seorang mahasiswa aktif Universitas Trunojoyo Madura Fakultas Teknik Program Studi Teknik Informatika yang gemar mempelajari teknologi terbaru. Fokus saya adalah pemrograman seperti HTML, CSS, dan lain sebagainya.</p>
-      </div>
-    </section>
+<!-- PROJECT -->
+<section id="project" class="mt-16">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-1/4"><div class="accent-underline"></div></div>
+    <h2 class="text-2xl font-bold">Project</h2>
+  </div>
 
-    <!-- EDUCATION -->
-    <section id="pendidikan" class="mt-16">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-1/3 md:w-1/4"><div class="accent-underline"></div></div>
-        <h2 class="text-2xl font-bold">Riwayat Pendidikan</h2>
-      </div>
-      <div class="space-y-4">
-        <div class="frost p-4 rounded-xl reveal">
-          <h4 class="font-semibold">Universitas Trunojoyo Madura</h4>
-          <p class="text-sm text-slate-300">Menempuh S1 Teknik Informatika - Sekarang</p>
-        </div>
-        <div class="frost p-4 rounded-xl reveal">
-          <h4 class="font-semibold">SMK Darul Ulum Banyuanyar</h4>
-          <p class="text-sm text-slate-300">Jurusan Teknik Komputer Dan Jaringan — 2022 - 2024</p>
-        </div>
-        <div class="frost p-4 rounded-xl reveal">
-          <h4 class="font-semibold">MTS Darul Ulum II</h4>
-          <p class="text-sm text-slate-300">Tahun 2018 - 2021</p>
-        </div>
-      </div>
-    </section>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="frost p-6 rounded-xl reveal">
+      <h4 class="font-semibold">Website Profil</h4>
+      <p class="text-sm text-slate-300 mt-2">Website modern menggunakan HTML, Tailwind CSS, dan JavaScript.</p>
+    </div>
+    <div class="frost p-6 rounded-xl reveal">
+      <h4 class="font-semibold">Desain UI Figma</h4>
+      <p class="text-sm text-slate-300 mt-2">Desain aplikasi mobile dengan konsep minimalis dan clean.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- HOBBY -->
-    <section id="hobi" class="mt-16">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-1/3 md:w-1/4"><div class="accent-underline"></div></div>
-        <h2 class="text-2xl font-bold">Hobi & Minat</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="frost p-6 rounded-xl reveal">
-          <ul class="list-disc list-inside space-y-2 text-slate-300">
-            <li>Belajar coding</li>
-            <li>Belajar desain</li>
-            <li>Travelling</li>
-          </ul>
-        </div>
-        <div class="frost p-6 rounded-xl reveal">
-          <ul class="list-disc list-inside space-y-2 text-slate-300">
-            <li>Bermain futsal dan olahraga ringan</li>
-            <li>Mendengarkan musik</li>
-            <li>Bercanda sama teman</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<!-- HOBI -->
+<section id="hobi" class="mt-16">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-1/4"><div class="accent-underline"></div></div>
+    <h2 class="text-2xl font-bold">Hobi & Minat</h2>
+  </div>
+  <div class="frost p-6 rounded-xl reveal">
+    <ul class="list-disc list-inside text-slate-300 space-y-2">
+      <li>Belajar Coding</li>
+      <li>Desain UI/UX</li>
+      <li>Travelling</li>
+      <li>Olahraga</li>
+    </ul>
+  </div>
+</section>
 
-    <!-- CONTACT -->
-    <section id="kontak" class="mt-16 mb-24">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-1/3 md:w-1/4"><div class="accent-underline"></div></div>
-        <h2 class="text-2xl font-bold">Kontak & Sosial Media</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="frost p-6 rounded-xl reveal">
-          <h4 class="font-semibold">Hubungi Saya</h4>
-          <ul class="mt-4 text-sm text-slate-300 space-y-2">
-            <li><i class="fa-solid fa-envelope"></i> Email: <strong>maulanaibrahimm709@example.com</strong></li>
-            <li><i class="fa-solid fa-phone"></i> Telepon: <strong>+62 812-4956-5406</strong></li>
-          </ul>
-          <div class="mt-4 flex gap-2 flex-wrap">
-            <a href="https://www.instagram.com/rzkyibrhm___" target="_blank" class="glass-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
-            <a href="https://www.tiktok.com/@rzkyibrhm04" target="_blank" class="glass-btn"><i class="fa-brands fa-tiktok"></i> TikTok</a>
-            <a href="https://wa.me/6281249565406" target="_blank" class="glass-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          </div>
-        </div>
-        <form class="frost p-6 rounded-xl reveal" onsubmit="event.preventDefault(); alert('Pesan terkirim!');">
-          <label class="block text-sm text-slate-400">Nama</label>
-          <input required class="mt-2 w-full p-3 rounded-md bg-transparent border border-white/6" placeholder="Nama Anda" />
-          <label class="block text-sm text-slate-400 mt-4">Email</label>
-          <input required type="email" class="mt-2 w-full p-3 rounded-md bg-transparent border border-white/6" placeholder="email@contoh.com" />
-          <label class="block text-sm text-slate-400 mt-4">Pesan</label>
-          <textarea required class="mt-2 w-full p-3 rounded-md bg-transparent border border-white/6" rows="4" placeholder="Tulis pesan..."></textarea>
-          <div class="mt-4 text-right">
-            <button type="submit" class="glass-btn"><i class="fa-solid fa-paper-plane"></i> Kirim</button>
-          </div>
-        </form>
-      </div>
-    </section>
+<!-- KONTAK -->
+<section id="kontak" class="mt-16 mb-24">
+  <div class="flex items-center gap-3 mb-6">
+    <div class="w-1/4"><div class="accent-underline"></div></div>
+    <h2 class="text-2xl font-bold">Kontak</h2>
+  </div>
+  <div class="frost p-6 rounded-xl reveal">
+    <p>Email: maulanaibrahimm709@example.com</p>
+    <p>Telepon: +62 812-4956-5406</p>
+  </div>
+</section>
 
-  </main>
+</main>
 
-  <footer class="text-center text-sm text-slate-400 pb-12">© <span id="year"></span> Maulana Ibrahim.</footer>
+<footer class="text-center text-sm text-slate-400 pb-12">
+  © <span id="year"></span> Maulana Ibrahim
+</footer>
 
-  <script>
-    document.getElementById('year').innerText = new Date().getFullYear();
+<script>
+document.getElementById('year').innerText = new Date().getFullYear();
 
-    // Reveal animation
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('show')})
-    },{threshold:0.12});
-    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('show')})
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
 
-    // Navbar active link highlight
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("#navbar-links a");
-
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (scrollY >= sectionTop) current = section.getAttribute("id");
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove("active-link");
-        if (link.getAttribute("href") === `#${current}`) {
-          link.classList.add("active-link");
-        }
-      });
-    });
-  </script>
 </body>
 </html>
-
